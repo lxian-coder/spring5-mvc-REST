@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 /**
  * Darcy Xian  22/11/20  5:05 pm      spring5-mvc-rest
  */
+// @Api  @ApiOperation is used for swagger ui
 @Api(description = "This is my Customer controller")
 @RestController
 @RequestMapping(CustomerController.BASE_URL)
