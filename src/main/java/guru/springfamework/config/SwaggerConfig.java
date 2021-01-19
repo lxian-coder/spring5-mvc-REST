@@ -20,7 +20,6 @@ import java.util.ArrayList;
  */
 @EnableSwagger2
 @Configuration
-
 public class SwaggerConfig extends WebMvcConfigurationSupport {
     @Bean
     public Docket api(){
@@ -31,6 +30,8 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
                 .pathMapping("/")
                 .apiInfo(metaData());
     }
+
+    // 如果不是SPringboot 没有自动识别找到swagger-ui 资源， 那么加上这个可以显示
     @Override
     protected void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/swagger-ui.html")
